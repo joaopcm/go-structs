@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 type person struct {
 	firstName string
 	lastName string
@@ -7,4 +9,8 @@ type person struct {
 
 func main() {
 	alex := person{firstName: "Alex", lastName: "Anderson"}
+	fmt.Printf("%+v", alex)
+
+	alex.lastName = "Washington"
+	fmt.Printf("%+v", alex)
 }
